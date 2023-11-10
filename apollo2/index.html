@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>manowar</title>
+  <p>hi there</p>
+
+
+    <button>Press</button>
+    <div id="greeting"></div>
+
+    <br>
+    <button id="second">dont pres </button>
+    <div id="bomb" style="color: red;"></div>
+
+
+    <br>
+    <button id="third">do press</button>
+    <div id="fallout" style="color: green;"></div>
+
+
+<br>
+    <button id="fourth">idk u can press if u want i gueees</button>
+    <div id="text4" style="color: red;";></div>
+
+<br>
+    <button id="fifth"> increase </button>
+
+    <br>
+    <br>
+
+    <div id="display" style="color: purple">0</div>
+</head>
+<body>
+  <script>
+   
+    //let, const
+
+   //embedding js
+
+   //const name = "furkan";
+   //const greet = `hello, ${name}`;
+   //console.log(greet);
+
+
+//-------------------------------------
+
+/*
+
+// Finds the first "button" element in the HTML document and assigns it to the variable "button"
+const button = document.querySelector("button");
+
+// Defines a function named "greet"
+function greet() {
+    // Prompts the user to enter their name and stores it in the variable "name"
+    const name = prompt("what's ur name");
+
+    // Finds the first element with an id of "greeting" in the HTML document and assigns it to the variable "greeting". Just assosication just like the button up top.
+    const greeting = document.querySelector("#greeting");
+
+    // Sets the text content of the "greeting" element to say hello to the user
+    greeting.textContent = `hello ${name}, nice to see ya`;
+}
+
+// Adds a click event listener to the "button" element that triggers the "greet" function when clicked
+button.addEventListener("click", greet);
+
+
+*/
+
+
+
+const button = document.querySelector("button");
+button.addEventListener("click", greet);
+
+function greet(){
+    const name = prompt("waz ur name");
+    const greeting = document.querySelector("#greeting");
+    greeting.textContent = `hello dude, ${name}`;
+}
+
+
+
+
+//---------------------------------------------------------
+
+
+const button2 = document.querySelector("#second");
+button2.addEventListener("click", nuke);
+console.log("dont actually nuke countries pls")
+
+function nuke() {
+    const country = prompt("choose country");
+    const launch = document.querySelector('#bomb');
+    launch.textContent = `country, ${country} got nukeeeeed.`;
+}
+
+//---------------------------------------------------------
+
+
+const button3 = document.querySelector('#third');
+button3.addEventListener("click", fallout);
+
+function fallout(){
+    let radius = prompt("enter radius of fallout");
+    const fallout_radius_msg = document.querySelector('#fallout');
+
+    while(radius > 500){
+       radius = prompt("thats kinda unlikely bro")
+       fallout_radius_msg.textContent = `fallout has been carried out to ${radius} miles.`;
+
+    }
+  
+        fallout_radius_msg.textContent = `fallout has been carried out to ${radius} miles.`;
+    
+
+}
+
+
+
+
+//---------------------------------------------------------
+
+let wtf = "wtfisthiswhatthehellisgoingonhere12";
+let length = wtf.length;
+console.log(length);
+
+
+let muyva = "Apple, Banana, Kiwi";
+let part = muyva.slice(7, 13);
+console.log(part); //only gives banana.
+
+
+let text = "please do not work for microsoft";
+let newText = text.replace("microsoft", "microsoft unless they give big money")
+console.log(newText);
+
+
+//ok enough bs
+
+
+//---------------------------------------------------------
+
+
+const button4 = document.querySelector('#fourth');
+button4.addEventListener("click", twist);
+
+function twist(){
+    const hometown = prompt("where was your hometown btw?");
+    const twist_text = document.querySelector('#text4');
+ 
+    
+    
+    twist_text.textContent = (`now your hometown ${hometown} got nuked howd u like that?`);
+    
+}
+
+
+
+//---------------------------------------------------------
+//button to increase
+
+const button5 = document.querySelector("#fifth");
+button5.addEventListener("click", increase);
+let a = 0;
+const display = document.querySelector("#display");
+
+
+function increase(){
+    a = a + 1;
+    console.log(a);
+    display.textContent = a;
+
+}
+
+//---------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html> 
